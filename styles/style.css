@@ -8,7 +8,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    user-select: text; /* extra*/
+    user-select: text;
 }
 
 :root{
@@ -46,7 +46,6 @@ body{
 
 /* ============== General Styles ================*/
 .container{
-    /* text-align: center; */
     margin: 0 auto;
 }
 
@@ -119,7 +118,6 @@ img{
 
 
 header{
-    /* height: 100vh; */
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -165,7 +163,7 @@ header{
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
-    /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
+    padding-top: 1.5;
 }
 
 /* ============ Scroll down  ========*/
@@ -183,7 +181,6 @@ header{
 nav{
     background: rgba(0, 0, 0, 0.3);
     width: max-content;
-    display: block;
     padding: 0.7rem 1.7rem;
     z-index: 2;
     position: fixed;
@@ -194,6 +191,7 @@ nav{
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
+    bottom: 1.5rem;
 }
 
 nav a{
@@ -203,6 +201,7 @@ nav a{
     display: flex;
     color: var(--color-light);
     font-size: 1.1rem;
+    text-decoration: none;
 }
 
 nav a:hover{
@@ -212,20 +211,15 @@ nav a:hover{
 nav a.active{
     background: var(--color-bg);
     color: var(--color-white);
+    text-decoration: none;
 }
 
 /* ===================== About =================*/
-.about__container{
-    /* display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%; */
-}
 .about__me{
     width: 100%;
     border-radius: 2rem;
     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
     display: grid;
-    display: inline-block;
     place-items: center;
     padding: 2rem;
     align-items: center;
@@ -240,25 +234,15 @@ nav a.active{
 .about__me-image img:hover{
     transform: rotate(0deg);
 }
+.about__content{
+    text-align: center;
+}
 
 .about__content p{
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+    text-align: center;
 }
-/* .about_me-image{
-    border-radius: 2rem;
-    overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
-}  
-.about__me-image:hover{
-    transform: rotate(0);
-}
-.about__cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}*/
 
 .about__card{
     padding: 0.5rem 1rem;
@@ -309,6 +293,7 @@ nav a.active{
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    margin-bottom: 1.5rem;
 }
 
 .skill__card:hover{
@@ -472,11 +457,7 @@ hr{
 
 /* ============ Contact Form ==============*/
 .container.contact__container{
-    /* width: 58%;
-    display: grid;
-    grid-template-columns: 30% 58%;
-    gap: 12%; */
-    margin-bottom: 1rem;
+    margin-bottom: 7rem;
 }
 .contact__options{
     display: flex;
@@ -530,18 +511,19 @@ input, textarea{
     section{
         margin-top: 6rem;
     }
-    header{
-        /* height: 100vh; */
-    }
-    .header__socials{
-        /* display: none; */
-    }
     .btn{
         padding: 0.5rem 0.6rem;
     }
 }
 /* ============ Media Queries (Small) ==============*/
 @media screen and (max-width: 600px){
+    nav{
+        gap: 0.5rem;
+    }
+    nav a{
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
     h4, h5{
         font-size: 1rem;
     }
@@ -591,6 +573,9 @@ input, textarea{
 }
 
 @media screen and (max-width:575px){
+    nav{
+        padding: 0.5rem 0.5rem;
+    }
     .experiences__container{
         margin: 3px;
     }

@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     
 </head>
 <body>
     
     <header>
-        <div class="container header__container">
+        <div id="intro" class="container header__container">
             <h5>Hello I am</h5>
             <h1>Rejone E Rasul Hridoy</h1>
             <h5 class="text-light">Software Engineer & Fullstack Developer</h5>
@@ -32,23 +33,24 @@
             <a href="#contact" class="scroll__down">Scroll Down</a>
 
             <div class="header__socials">
-                <a href="http://linkedin.com" target="_blank"><span><i class="bi bi-linkedin"></i></a>
-                <a href="http://github.com" target="_blank"><span><i class="bi bi-github"></i></a>
-                <a href="http://facebook.com" target="_blank"><span><i class="bi bi-facebook"></i></span></a>
+                <a href="https://www.linkedin.com/in/rejonehridoy/" target="_blank"><span><i class="bi bi-linkedin"></i></a>
+                <a href="http://github.com/rejonehridoy" target="_blank"><span><i class="bi bi-github"></i></a>
+                <a href="http://facebook.com/rejoneerasul.hridoy" target="_blank"><span><i class="bi bi-facebook"></i></span></a>
             </div>
             
         </div>
-        
     </header>
-    <nav>
-        <a href="" class="active"><span class="material-symbols-outlined">home</span></a>
-        <a href="#about"><span class="material-symbols-outlined">person</span></a>
-        <a href="#skills"><span class="material-symbols-outlined">book</span></a>
-        <a href="#contact"><span class="material-symbols-outlined">comment</span></a>
-        <a href="#projects"><span class="material-symbols-outlined">view_agenda</span></a>
+    <!-- Nav Bar Items -->
+    <nav class="navbar-options">
+        <a href="#intro" id="nav-intro" onclick="setActive('intro');" class="nav-option active"><span class="material-symbols-outlined">home</span></a>
+        <a href="#about" id="nav-about" onclick="setActive('about');" class="nav-option"><span class="material-symbols-outlined">person</span></a>
+        <a href="#skills" id="nav-skills" onclick="setActive('skills');" class="nav-option"><span class="material-symbols-outlined">book</span></a>
+        <a href="#experiences" id="nav-experiences" onclick="setActive('experiences');" class="nav-option"><span class="material-symbols-outlined">business_center</span></a>
+        <a href="#projects" id="nav-projects" onclick="setActive('projects');" class="nav-option"><span class="material-symbols-outlined">view_agenda</span></a>
+        <a href="#contact" id="nav-contact" onclick="setActive('contact');" class="nav-option"><span class="material-symbols-outlined">comment</span></a>
     </nav>
     
-
+    <!-- About Section -->
     <section id="about" class="about">
         <h5>Get to Know</h5>
         <h2>About Me</h2>
@@ -87,73 +89,23 @@
                         </div>
                     </article>
                 </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora quas molestiae, odit quod cumque sunt cupiditate possimus unde totam provident autem consequatur velit, nam harum fugiat natus earum, reprehenderit a.</p>
+                <p>
+                    I am a software engineer and currently, I am working as an Associate Software Engineer in the 
+                    Computer Software industry. Skilled in Asp.net core, C#, MSSQL Database, and Web API. 
+                    I am passionate about developing software and website and I like to increase my knowledge day by day.
+                </p>
                 
                 <a href="#contact" class="btn btn-primary">Let's Talk</a>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h5>What skills I Have</h5>
         <h2>My Skills</h2>
 
         <div class="row container skills__container">
-            <!-- Frontend Development -->
-            <div class="col-md-6 skills__frontend">
-                <div class="skill__card">
-                    <h3>Frontend Development</h3>
-                    <div class="skills__content">
-                        <article class="skills__details">
-                            <span class="skills_details-icon material-symbols-outlined">verified</span>
-                            <div>
-                                <h4>HTML</h4>
-                                <small class="text-light">Experienced</small>
-                            </div>
-                        </article>
-
-                        <article class="skills__details">
-                            <span class="skills_details-icon material-symbols-outlined">verified</span>
-                            <div>
-                                <h4>CSS</h4>
-                                <small class="text-light">Experienced</small>
-                            </div>
-                        </article>
-
-                        <article class="skills__details">
-                            <span class="skills_details-icon material-symbols-outlined">verified</span>
-                            <div>
-                                <h4>Bootstrap</h4>
-                                <small class="text-light">Experienced</small>
-                            </div>
-                        </article>
-
-                        <article class="skills__details">
-                            <span class="skills_details-icon material-symbols-outlined">verified</span>
-                            <div>
-                                <h4>Javascript</h4>
-                                <small class="text-light">Intermediate</small>
-                            </div>
-                        </article>
-
-                        <article class="skills__details">
-                            <span class="skills_details-icon material-symbols-outlined">verified</span>
-                            <div>
-                                <h4>Jquery</h4>
-                                <small class="text-light">Intermediate</small>
-                            </div>
-                        </article>
-
-                        <article class="skills__details">
-                            <span class="skills_details-icon material-symbols-outlined">verified</span>
-                            <div>
-                                <h4>React</h4>
-                                <small class="text-light">Basic</small>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
             <!-- Backend Development -->
             <div class="col-md-6 skills__backend">
                 <div class="skill__card">
@@ -209,9 +161,178 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Frontend Development -->
+            <div class="col-md-6 skills__frontend">
+                <div class="skill__card">
+                    <h3>Frontend Development</h3>
+                    <div class="skills__content">
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>HTML</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>CSS</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Bootstrap</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Javascript</h4>
+                                <small class="text-light">Intermediate</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Jquery</h4>
+                                <small class="text-light">Intermediate</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>React</h4>
+                                <small class="text-light">Basic</small>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software and Tools -->
+            <div class="col-md-6 skills__software&Tools">
+                <div class="skill__card">
+                    <h3>Software & Tools</h3>
+                    <div class="skills__content">
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Visual Studio</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Github</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>BitBucket</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Gitlab</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Jira, Trello</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Postman</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="col-md-6 skills__additional">
+                <div class="skill__card">
+                    <h3>Additional Skills</h3>
+                    <div class="skills__content">
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Git</h4>
+                                <small class="text-light">Experienced</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Machine Learning</h4>
+                                <small class="text-light">Basic</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Deep Learning</h4>
+                                <small class="text-light">Basic</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Problem Solving</h4>
+                                <small class="text-light">Intermediate</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Firebase</h4>
+                                <small class="text-light">Basic</small>
+                            </div>
+                        </article>
+
+                        <article class="skills__details">
+                            <span class="skills_details-icon material-symbols-outlined">verified</span>
+                            <div>
+                                <h4>Solidity</h4>
+                                <small class="text-light">Basic</small>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Experiences Section -->
     <section id="experiences">
         <h5>What experiences I Have</h5>
         <h2>Experiences</h2>
@@ -226,28 +347,30 @@
             <ul class="experience__list">
                 <li>
                     <span class="experience_list-icon material-symbols-outlined">check_small</span>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, ex?</p>
+                    <p>Analyzing, Designing, and executing according to the software development life cycle (SLDC)</p>
                 </li>
 
                 <li>
                     <span class="experience_list-icon material-symbols-outlined">check_small</span>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, ex?</p>
+                    <p>Working in Agile methodology</p>
+                </li>
+                
+                <li>
+                    <span class="experience_list-icon material-symbols-outlined">check_small</span>
+                    <p>Communicating with global clients and gathering requirements</p>
                 </li>
 
                 <li>
                     <span class="experience_list-icon material-symbols-outlined">check_small</span>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, ex?</p>
+                    <p>Writing a well designed and testable code</p>
                 </li>
 
                 <li>
                     <span class="experience_list-icon material-symbols-outlined">check_small</span>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, ex?</p>
+                    <p>Troubleshooting, debugging and upgrading existing systems</p>
                 </li>
 
-                <li>
-                    <span class="experience_list-icon material-symbols-outlined">check_small</span>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, ex?</p>
-                </li>
+                
             </ul>
 
             <div class="row projects__container">
@@ -256,10 +379,14 @@
                         <div class="project__item-image">
                             <img class="intelisale-logo" src="/images/intelisale.png" alt="Intelisale" srcset="">
                         </div>
-                        <h3>Intelisale</h3>
+                        <div class="d-flex align-items-center" style="gap: 0.7rem;">
+                            <h3>Intelisale</h3>
+                            <a href="https://intelisale.com/" style="padding-bottom: 10px;" target="_blank" ><i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                        
                         <div class="project-item-description">
                             <p class="text-light">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, sit aut amet nisi placeat quo blanditiis temporibus qui voluptas natus.
+                                Intelisale is an omnichannel sales platform which increases field sales, telesales, and eCommerce productivity for leading B2B companies.
                             </p>
                             <div class="project-attribute d-flex flex-wrap">
                                 <span>Architecture: NopCommerce</span>
@@ -296,10 +423,6 @@
                                 <span>Framework: Asp.Net Core MVC</span>
                             </div>
                         </div>
-                        <!-- <div class="project-item-links">
-                            <a href="http://gitub.com" target="_blank" class="btn">Github</a>
-                            <a href="http://gitub.com" target="_blank" class="btn btn-primary">Live Demo</a>
-                        </div> -->
                     </div>
                     
                 </article>
@@ -346,16 +469,13 @@
                                 <span>Framework: Asp.Net Core MVC</span>
                             </div>
                         </div>
-                        <!-- <div class="project-item-links">
-                            <a href="http://gitub.com" target="_blank" class="btn">Github</a>
-                            <a href="http://gitub.com" target="_blank" class="btn btn-primary">Live Demo</a>
-                        </div> -->
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
         <h5>My Background History</h5>
         <h2>Education</h2>
@@ -409,6 +529,7 @@
 
     </section>
 
+    <!-- Personal Projects Section -->
     <section id="projects">
         <h5>My Recent Work</h5>
         <h2>Projects</h2>
@@ -417,23 +538,22 @@
             <article class="col-lg-6 col-md-6">
                 <div class="project__item">
                     <div class="project__item-image">
-                        <img src="/images/assets/portfolio1.jpg" alt="" srcset="">
+                        <img src="/images/movie-house.jpg" alt="Movie House" srcset="">
                     </div>
-                    <h3>This is a project item title</h3>
+                    <h3>Movie House</h3>
                     <div class="project-item-description">
                         <p class="text-light">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, sit aut amet nisi placeat quo blanditiis temporibus qui voluptas natus.
+                            Its a movie related website such as IMDB where user can watch movie details,can add to wishlist,can store what movies they had watched and can suggest friends.
                         </p>
                         <div class="project-attribute d-flex flex-wrap">
-                            <span>Architecture: NopCommerce</span>
+                            <span>Type: Asp.net MVC</span>
                             <span>Language: C#</span>
+                            <span>Frontend: HTML, CSS, Bootstrap, Js</span>
                             <span>Database: MSSQL</span>
-                            <span>Framework: Asp.Net Core MVC</span>
                         </div>
                     </div>
                     <div class="project-item-links">
-                        <a href="http://gitub.com" target="_blank" class="btn">Github</a>
-                        <a href="http://gitub.com" target="_blank" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/rejonehridoy/MovieHouse" target="_blank" class="btn">Github</a>
                     </div>
                 </div>
             </article>
@@ -441,12 +561,22 @@
             <article class="col-lg-6 col-md-6">
                 <div class="project__item">
                     <div class="project__item-image">
-                        <img src="/images/assets/portfolio2.jpg" alt="" srcset="">
+                        <img src="/images/resumebuilder.svg" style="background-color: white;" alt="Resume Builder" srcset="">
                     </div>
-                    <h3>This is a project item title</h3>
+                    <h3>Resume Builder</h3>
+                    <div class="project-item-description">
+                        <p class="text-light">
+                            Resume Builder is a well-known tool for building a resume from different given templates. It has an option for using multiple themes at the same time. All data are saved securely so that in the future he/she can use the different theme for same data.
+                        </p>
+                        <div class="project-attribute d-flex flex-wrap">
+                            <span>Type: Asp.net Core MVC</span>
+                            <span>Language: C#</span>
+                            <span>Frontend: HTML, CSS, Bootstrap, Js</span>
+                            <span>Database: MSSQL</span>
+                        </div>
+                    </div>
                     <div class="project-item-links">
-                        <a href="http://gitub.com" target="_blank" class="btn">Github</a>
-                        <a href="http://gitub.com" target="_blank" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/rejonehridoy/ResumeBuilder" target="_blank" class="btn">Github</a>
                     </div>
                 </div>
                 
@@ -455,12 +585,22 @@
             <article class="col-lg-6 col-md-6">
                 <div class="project__item">
                     <div class="project__item-image">
-                        <img src="/images/assets/portfolio3.jpg" alt="" srcset="">
+                        <img src="/images/worklance_logo.png" alt="WorkLance" srcset="">
                     </div>
-                    <h3>This is a project item title</h3>
+                    <h3>WorkLance</h3>
+                    <div class="project-item-description">
+                        <p class="text-light">
+                            This app is useful for the search of worker at anywhere the user want. User can hire workers for user's work within the area user live. With this project the problem of bargaining wont be a issue. Worker will get more work opportunities than before with this project and user can hire workers at user's selected location.
+                        </p>
+                        <div class="project-attribute d-flex flex-wrap">
+                            <span>Type: Android</span>
+                            <span>Language: Java</span>
+                            <span>Frontend: XML</span>
+                            <span>Database: Firebase</span>
+                        </div>
+                    </div>
                     <div class="project-item-links">
-                        <a href="http://gitub.com" target="_blank" class="btn">Github</a>
-                        <a href="http://gitub.com" target="_blank" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/rejonehridoy/WorkLance" target="_blank" class="btn">Github</a>
                     </div>
                 </div>
             </article>
@@ -468,18 +608,29 @@
             <article class="col-lg-6 col-md-6">
                 <div class="project__item">
                     <div class="project__item-image">
-                        <img src="/images/assets/portfolio4.jpg" alt="" srcset="">
+                        <img src="/images/timeline.jpg" alt="TimeLine" srcset="">
                     </div>
-                    <h3>This is a project item title</h3>
+                    <h3>Timeline</h3>
+                    <div class="project-item-description">
+                        <p class="text-light">
+                            This is a time-tracking app where people can save their activities like what they did, where they go, where they ate, what they bought etc. This app also has a password manager where passwords can be stored securely.
+                        </p>
+                        <div class="project-attribute d-flex flex-wrap">
+                            <span>Type: Android</span>
+                            <span>Language: Java</span>
+                            <span>Frontend: XML</span>
+                            <span>Database: Firebase, SQLite</span>
+                        </div>
+                    </div>
                     <div class="project-item-links">
-                        <a href="http://gitub.com" target="_blank" class="btn">Github</a>
-                        <a href="http://gitub.com" target="_blank" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/rejonehridoy/Timeline" target="_blank" class="btn">Github</a>
                     </div>
                 </div>
             </article>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h5>Get in Touch</h5>
         <h2>Contact Me</h2>
@@ -510,7 +661,7 @@
                 <input type="text" name="name" placeholder="Your Full Name" required/>
                 <input type="email" name="email" id="" placeholder="Your Email" required>
                 <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" onclick="alert('Currently this feature is not available. Please use another method to contact')" class="btn btn-primary">Send Message</button>
             </form>
         </div>
     </section>
