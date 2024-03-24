@@ -81,7 +81,7 @@ section > h2{
 a{
     color: var(--color-primary);
     transition: var(--transition);
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:hover{
@@ -420,6 +420,48 @@ hr{
     border-width: 1px;
     background-color: var(--color-primary);
 }
+/* =========== Certificates =========== */
+.certificate-container{
+    background: var(--color-bg-variant);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+}
+
+.certificate-container:hover{
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+.certificate-item{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.certificate-item h3{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.certificate-item-icon{
+    margin-top: 6px;
+    color: var(--color-primary);
+    width: 15%;
+}
+
+.certificate-details{
+    width: 85%;
+}
+
+.certificate-item-links{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
 /* ============ Projects =================*/
 .project__item{
     background: var(--color-bg-variant);
