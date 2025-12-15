@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         countdownSpan.textContent = seconds;
         if (seconds <= 0) {
             clearInterval(interval);
+            banner.style.display = 'none';
             window.location.href = redirectUrl;
         }
     }, 1000);
