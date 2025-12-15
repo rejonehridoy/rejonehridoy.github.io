@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -11,7 +11,7 @@
     user-select: text;
 }
 
-:root{
+:root {
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
@@ -26,15 +26,15 @@
     --color-width-sm: 90%
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background: var(--color-bg);
     color: var(--color-white);
@@ -45,50 +45,56 @@ body{
 }
 
 /* ============== General Styles ================*/
-.container{
+.container {
     margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 500;
 }
-h4{
+
+h4 {
     font-size: 1rem;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
 }
 
-section{
+section {
     margin-top: 8rem;
 }
 
-section > h2, section > h5{
+section>h2,
+section>h5 {
     text-align: center;
     color: var(--color-light);
 }
 
-section > h2{
+section>h2 {
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
-.text-light{
+.text-light {
     color: var(--color-light) !important;
 }
 
-a{
+a {
     color: var(--color-primary);
     transition: var(--transition);
     text-decoration: none !important;
 }
 
-a:hover{
+a:hover {
     color: var(--color-white);
 }
 
-.btn{
+.btn {
     width: max-content;
     display: inline-block;
     color: var(--color-primary);
@@ -99,36 +105,36 @@ a:hover{
     transition: var(--transition);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--color-white);
     color: var(--color-bg);
     border-color: transparent;
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--color-primary);
     color: var(--color-bg);
 }
 
-img{
+img {
     display: block;
     width: 100%;
     object-fit: cover;
 }
 
 
-header{
+header {
     padding-top: 7rem;
     overflow: hidden;
 }
 
-.header__container{
+.header__container {
     text-align: center;
     height: 100%;
     position: relative;
 }
 
-.download-resume-lets-talk-btns{
+.download-resume-lets-talk-btns {
     margin-top: 2.5rem;
     display: flex;
     justify-content: center;
@@ -136,7 +142,7 @@ header{
 }
 
 /* ============ Socials ========*/
-.header__socials{
+.header__socials {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +152,7 @@ header{
     bottom: 3rem;
 }
 
-.header__socials::after{
+.header__socials::after {
     content: '';
     width: 1px;
     height: 2rem;
@@ -154,7 +160,7 @@ header{
 }
 
 /* ============ header image =======  */
-.display-img{
+.display-img {
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
     height: 30rem;
@@ -167,7 +173,7 @@ header{
 }
 
 /* ============ Scroll down  ========*/
-.scroll__down{
+.scroll__down {
     position: absolute;
     right: -2.3rem;
     bottom: 5rem;
@@ -178,7 +184,7 @@ header{
 }
 
 /* ============ Nav Bar ======== */
-nav{
+nav {
     background: rgba(0, 0, 0, 0.3);
     width: max-content;
     padding: 0.7rem 1.7rem;
@@ -194,7 +200,7 @@ nav{
     bottom: 1.5rem;
 }
 
-nav a{
+nav a {
     background: transparent;
     padding: 0.9rem;
     border-radius: 50%;
@@ -204,18 +210,18 @@ nav a{
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
-nav a.active{
+nav a.active {
     background: var(--color-bg);
     color: var(--color-white);
     text-decoration: none;
 }
 
 /* ===================== About =================*/
-.about__me{
+.about__me {
     width: 100%;
     border-radius: 2rem;
     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
@@ -225,37 +231,42 @@ nav a.active{
     align-items: center;
     margin-bottom: 1rem;
 }
-.about__me-image img{
+
+.about__me-image img {
     border-radius: 2rem;
     overflow: hidden;
     transform: rotate(5deg);
     transition: var(--transition);
 }
-.about__me-image img:hover{
+
+.about__me-image img:hover {
     transform: rotate(0deg);
 }
-.about__content{
+
+.about__content {
     text-align: center;
 }
 
-.about__content p{
+.about__content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
     text-align: center;
 }
 
-.about__card{
+.about__card {
     padding: 0.5rem 1rem;
 }
 
-.about__card h5{
+.about__card h5 {
     font-size: 0.95rem;
 }
-.about__card small{
+
+.about__card small {
     font-size: 0.7rem;
     color: var(--color-light);
 }
-.card-items{
+
+.card-items {
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1rem;
@@ -265,29 +276,29 @@ nav a.active{
     min-height: 155px;
 }
 
-.card-items:hover{
+.card-items:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
 }
 
-.card-items a{
+.card-items a {
     color: var(--color-white);
     text-decoration: none;
 }
 
-.card-items a:hover{
+.card-items a:hover {
     color: var(--color-primary);
 }
 
-.about__icon{
+.about__icon {
     color: var(--color-primary);
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
 /* ============= Skill Section =============================*/
-.skill__card{
+.skill__card {
     padding: 30px 30px;
     background: var(--color-bg-variant);
     border-radius: 2rem;
@@ -296,49 +307,52 @@ nav a.active{
     margin-bottom: 1.5rem;
 }
 
-.skill__card:hover{
+.skill__card:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
 }
-.skill__card h3{
+
+.skill__card h3 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-primary);
 }
 
-.skills__content{
+.skills__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
 
 }
 
-.skills__details{
+.skills__details {
     display: flex;
     gap: 1rem;
 }
 
-.skills_details-icon{
+.skills_details-icon {
     margin-top: 6px;
     color: var(--color-primary);
 }
 
 
 /* ============ Experiences ============ */
-.experiences__container{
+.experiences__container {
     border-radius: 0 0 2rem 2rem;
     border: 1px solid var(--color-primary);
     height: fit-content;
     transition: var(--transition);
     padding: 0;
 }
-.experiences__container:hover{
+
+.experiences__container:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
 }
-.experience__head{
+
+.experience__head {
     text-align: center;
     background: var(--color-primary);
     padding: 2rem;
@@ -346,46 +360,53 @@ nav a.active{
     box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.experience__head h3{
+.experience__head h3 {
     color: var(--color-bg);
     font-size: 1rem;
     text-align: center;
 }
-.experience__head p{
+
+.experience__head p {
     margin-bottom: 0;
 }
-.experience__head small{
+
+.experience__head small {
     color: var(--color-bg);
 }
-.intelisale-logo{
+
+.intelisale-logo {
     background-color: white;
 }
-.experience__list{
+
+.experience__list {
     padding: 2rem;
 }
-.experience__list li{
+
+.experience__list li {
     display: flex;
     gap: 1rem;
     margin-bottom: 0.8rem;
 }
-.experience_list-icon{
+
+.experience_list-icon {
     color: var(--color-primary);
     margin-top: 2px;
 }
 
-.experience__list p{
+.experience__list p {
     margin-bottom: 0;
 }
 
-.experiences__container .projects__container{
+.experiences__container .projects__container {
     margin: 2px;
 }
 
-.project__item-image img{
+.project__item-image img {
     max-height: 250px;
 }
+
 /* ============ Education ============ */
-.education-container{
+.education-container {
     background: var(--color-bg-variant);
     padding: 1.5rem;
     border-radius: 2rem;
@@ -394,24 +415,28 @@ nav a.active{
     margin-bottom: 1.5rem;
 }
 
-.education-container:hover{
+.education-container:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
 }
-.education-item{
+
+.education-item {
     display: flex;
     gap: 2rem;
     margin-bottom: 1rem;
 }
-.education-item h3{
+
+.education-item h3 {
     margin-bottom: 1rem;
     color: var(--color-primary);
 }
-.education-item-icon{
+
+.education-item-icon {
     margin-top: 6px;
     color: var(--color-primary);
 }
-hr{
+
+hr {
     display: block;
     margin-bottom: 1rem;
     margin-left: auto;
@@ -420,8 +445,9 @@ hr{
     border-width: 1px;
     background-color: var(--color-primary);
 }
+
 /* =========== Certificates =========== */
-.certificate-container{
+.certificate-container {
     background: var(--color-bg-variant);
     padding: 1.5rem;
     border-radius: 2rem;
@@ -430,32 +456,34 @@ hr{
     margin-bottom: 1.5rem;
 }
 
-.certificate-container:hover{
+.certificate-container:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
 }
-.certificate-item{
+
+.certificate-item {
     display: flex;
     gap: 2rem;
     margin-bottom: 1rem;
 }
-.certificate-item h3{
+
+.certificate-item h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--color-primary);
 }
 
-.certificate-item-icon{
+.certificate-item-icon {
     margin-top: 6px;
     color: var(--color-primary);
     width: 15%;
 }
 
-.certificate-details{
+.certificate-details {
     width: 85%;
 }
 
-.certificate-item-links{
+.certificate-item-links {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
@@ -463,7 +491,7 @@ hr{
 }
 
 /* ============ Projects =================*/
-.project__item{
+.project__item {
     background: var(--color-bg-variant);
     padding: 1.2rem;
     border-radius: 2rem;
@@ -472,25 +500,27 @@ hr{
     margin-bottom: 1.5rem;
 }
 
-.project__item:hover{
+.project__item:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
 }
 
-.project__item-image{
+.project__item-image {
     border-radius: 1.5rem;
     overflow: hidden;
 }
 
-.project__item h3{
+.project__item h3 {
     margin: 1.2rem 0 2rem;
 }
-.project-attribute{
+
+.project-attribute {
     line-height: 1.5rem;
     column-gap: 1rem;
     margin-bottom: 1rem;
 }
-.project-item-links{
+
+.project-item-links {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
@@ -498,17 +528,18 @@ hr{
 }
 
 /* ============ Contact Form ==============*/
-.container.contact__container{
+.container.contact__container {
     margin-bottom: 7rem;
 }
-.contact__options{
+
+.contact__options {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     margin-bottom: 1rem;
 }
 
-.contact__option{
+.contact__option {
     background: var(--color-bg-variant);
     padding: 1.2rem;
     border-radius: 1.2rem;
@@ -516,26 +547,32 @@ hr{
     border: 1px solid transparent;
     transition: var(--transition);
 }
-.contact__option:hover{
+
+.contact__option:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
 }
-.contact__option-icon{
+
+.contact__option-icon {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
-.contact__option a{
+
+.contact__option a {
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 0.8rem;
 
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
-input, textarea{
+
+input,
+textarea {
     padding: 1.5rem;
     border-radius: 0.5rem;
     background: transparent;
@@ -543,85 +580,131 @@ input, textarea{
     resize: none;
     color: white;
 }
+
 /* ============ Media Queries (Medium) ==============*/
 
-@media screen and (max-width: 1024px){
-    .container{
+@media screen and (max-width: 1024px) {
+    .container {
         width: var(--container-width-md);
     }
 
-    section{
+    section {
         margin-top: 6rem;
     }
-    .btn{
+
+    .btn {
         padding: 0.5rem 0.6rem;
     }
 }
+
 /* ============ Media Queries (Small) ==============*/
-@media screen and (max-width: 600px){
-    nav{
+@media screen and (max-width: 600px) {
+    nav {
         gap: 0.5rem;
     }
-    nav a{
+
+    nav a {
         padding: 0.6rem;
         font-size: 0.9rem;
     }
-    h4, h5{
+
+    h4,
+    h5 {
         font-size: 1rem;
     }
-    .container{
+
+    .container {
         width: var(--container-width-sm);
     }
 
-    .header__socials{
+    .header__socials {
         left: 5px;
     }
-    .scroll__down{
+
+    .scroll__down {
         right: -2rem;
     }
 
-    section > h2{
+    section>h2 {
         margin-bottom: 2rem;
     }
 
 }
 
-@media  screen and (max-width: 1200px) {
-    .card-items{
+@media screen and (max-width: 1200px) {
+    .card-items {
         min-height: auto;
     }
 }
 
-@media screen and (max-width:768px){
-    h4{
+@media screen and (max-width:768px) {
+    h4 {
         font-size: 0.7rem;
     }
 
-    .skill__card{
+    .skill__card {
         margin-bottom: 1rem;
         padding: 20px 15px;
     }
 
-    .project-item-links{
+    .project-item-links {
         gap: 0.2rem;
     }
 
-    .experience__list{
+    .experience__list {
         padding: 0.5rem;
     }
-    .btn{
+
+    .btn {
         padding: 0.5rem 0.8rem;
     }
 }
 
-@media screen and (max-width:575px){
-    nav{
+@media screen and (max-width:575px) {
+    nav {
         padding: 0.5rem 0.5rem;
     }
-    .experiences__container{
+
+    .experiences__container {
         margin: 3px;
     }
-    .btn{
+
+    .btn {
         padding: 0.4rem 0.6rem;
+    }
+}
+
+/* ============ Redirect Banner ============ */
+.redirect-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg-variant);
+    color: var(--color-white);
+    padding: 1rem;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.redirect-banner p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .redirect-banner {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .redirect-banner p {
+        font-size: 0.9rem;
     }
 }
